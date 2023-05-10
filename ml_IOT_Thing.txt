@@ -1,0 +1,49 @@
+
+*** Dumping AST Record Layout
+         0 | class Core
+         0 |   unsigned int class_id
+           | [sizeof=4, dsize=4, align=4,
+           |  nvsize=4, nvalign=4]
+
+*** Dumping AST Record Layout
+         0 | class GPS_DD
+         0 |   double latitude
+         8 |   double longitude
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class Thing
+         0 |   (Thing vtable pointer)
+         8 |   unsigned int model
+        12 |   unsigned int sequence_num
+        16 |   class GPS_DD location
+        16 |     double latitude
+        24 |     double longitude
+        32 |   class Core (virtual base)
+        32 |     unsigned int class_id
+           | [sizeof=40, dsize=36, align=8,
+           |  nvsize=32, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class IP_Address
+         0 |   unsigned int addr
+           | [sizeof=4, dsize=4, align=4,
+           |  nvsize=4, nvalign=4]
+
+*** Dumping AST Record Layout
+         0 | class IOT_Thing
+         0 |   (IOT_Thing vtable pointer)
+         8 |   class IP_Address connected
+         8 |     unsigned int addr
+        48 |   class Core (virtual base)
+        48 |     unsigned int class_id
+        16 |   class Thing (virtual base)
+        16 |     (Thing vtable pointer)
+        24 |     unsigned int model
+        28 |     unsigned int sequence_num
+        32 |     class GPS_DD location
+        32 |       double latitude
+        40 |       double longitude
+           | [sizeof=56, dsize=52, align=8,
+           |  nvsize=12, nvalign=8]
