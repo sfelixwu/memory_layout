@@ -18,6 +18,7 @@ class Thing : public virtual Core
   GPS_DD       location;
   
   Thing(void);
+  virtual void xyz() {}
 };
 
 #endif /* _THING_H_ */

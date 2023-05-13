@@ -19,6 +19,7 @@ class Core
  public:
   unsigned int class_id;
   Core(void);
+  virtual void xyz() {}
 };
 
 #endif  /* _CORE_H_ */

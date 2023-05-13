@@ -20,6 +20,7 @@ class IOT_Thing: public virtual Thing
   IP_Address connected;
   IOT_Thing(void);
   IOT_Thing(IP_Address arg_connecting);
+  virtual void xyz() {}
 };
 
 #endif /* _IOT_THING_H_ */
