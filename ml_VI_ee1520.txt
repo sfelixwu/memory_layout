@@ -1,0 +1,39 @@
+
+*** Dumping AST Record Layout
+         0 | class Account
+         0 |   unsigned long A1
+           | [sizeof=8, dsize=8, align=8,
+           |  nvsize=8, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class Employee
+         0 |   (Employee vtable pointer)
+         8 |   unsigned long E1
+        16 |   class Account (virtual base)
+        16 |     unsigned long A1
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class Student
+         0 |   (Student vtable pointer)
+         8 |   unsigned long S1
+        16 |   class Account (virtual base)
+        16 |     unsigned long A1
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class Work_Study
+         0 |   (Work_Study vtable pointer)
+         8 |   unsigned long W1
+        32 |   class Account (virtual base)
+        32 |     unsigned long A1
+        16 |   class Employee (virtual base)
+        16 |     (Employee vtable pointer)
+        24 |     unsigned long E1
+        40 |   class Student (virtual base)
+        40 |     (Student vtable pointer)
+        48 |     unsigned long S1
+           | [sizeof=56, dsize=56, align=8,
+           |  nvsize=16, nvalign=8]

@@ -1,0 +1,36 @@
+
+*** Dumping AST Record Layout
+         0 | class Account
+         0 |   unsigned long A1
+           | [sizeof=8, dsize=8, align=8,
+           |  nvsize=8, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class Employee
+         0 |   class Account (base)
+         0 |     unsigned long A1
+         8 |   unsigned long E1
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class Student
+         0 |   class Account (base)
+         0 |     unsigned long A1
+         8 |   unsigned long S1
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class Work_Study
+         0 |   class Employee (base)
+         0 |     class Account (base)
+         0 |       unsigned long A1
+         8 |     unsigned long E1
+        16 |   class Student (base)
+        16 |     class Account (base)
+        16 |       unsigned long A1
+        24 |     unsigned long S1
+        32 |   unsigned long W1
+           | [sizeof=40, dsize=40, align=8,
+           |  nvsize=40, nvalign=8]
